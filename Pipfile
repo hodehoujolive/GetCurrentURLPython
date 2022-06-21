@@ -8,8 +8,6 @@ verify_ssl = true
 [packages]
 pytest = "*"
 selenium = "*"
-webdriver-manager = "*"
-python-dotenv = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "*"

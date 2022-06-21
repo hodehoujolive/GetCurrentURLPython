@@ -1,9 +1,9 @@
 import pytest
-from pages.selenium_playground import SELENIUM_PLAYGROUND_PAGE
+from pages.selenium_playground import SeleniumPlaygroundPage
 
 
 def test_selenium_playground(browser):
-    playground_page = SELENIUM_PLAYGROUND_PAGE(browser)
+    playground_page = SeleniumPlaygroundPage(browser)
     playground_page.load()
     playground_page.simple_form()
 

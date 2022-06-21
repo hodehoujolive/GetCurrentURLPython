@@ -1,11 +1,10 @@
 import pytest
-import time
-from pages.ecommerce_playground import ECOMMERCE_PLAYGROUND_PAGE
+from pages.ecommerce_playground import EcommercePlaygroundPage
 
-keyword = "lambda"
+keyword = "iPhone"
 
 def test_ecommerce_playground(browser):
-    ecommerce_page = ECOMMERCE_PLAYGROUND_PAGE(browser)
+    ecommerce_page = EcommercePlaygroundPage(browser)
     ecommerce_page.load()
     ecommerce_page.search(keyword)
 
@@ -14,10 +13,8 @@ def test_ecommerce_playground(browser):
 
 
     print("The current url is: "+str(get_url))
-    assert "lambda" in get_url
+    assert "iPhone" in get_url
 
     with open('urls.txt', 'a') as f:
         f.write(title + " : "+ get_url)
         f.write('\n')
-
-    

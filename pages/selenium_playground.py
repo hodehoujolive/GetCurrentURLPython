@@ -1,14 +1,12 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 
-
-class SELENIUM_PLAYGROUND_PAGE:
+class SeleniumPlaygroundPage:
 
     #url
     url = 'https://www.lambdatest.com/selenium-playground/'
 
     #locators
-    SIMPLE_FORM = (By.XPATH, "//a[normalize-space()='Simple Form Demo']")
+    simple_form_demo = (By.XPATH, "//a[normalize-space()='Simple Form Demo']")
 
     # Initializer
     def __init__(self, browser):
@@ -18,9 +16,8 @@ class SELENIUM_PLAYGROUND_PAGE:
     # Interaction methods
     def load(self):
         self.browser.get(self.url)
-        self.browser.implicitly_wait(30)
         
 
     def simple_form(self):
-        simple_form = self.browser.find_element(*self.SIMPLE_FORM)
+        simple_form = self.browser.find_element(*self.simple_form_demo)
         simple_form.click()
